@@ -12,18 +12,13 @@
 
 #include "ft_printf.h"
 
-static int	num_len(long n, int len)
+static size_t	num_len(unsigned int n, size_t len)
 {
 	len = 0;
 	if (n == 0)
 	{
 		ft_putchr('0');
 		return (1);
-	}
-	if (n < 0)
-	{
-		len++;
-		n = -n;
 	}
 	while (n > 0)
 	{
@@ -33,20 +28,14 @@ static int	num_len(long n, int len)
 	return (len);
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr_u(unsigned int n)
 {
 	t_putnbr	v;
 	int			arr[11];
 
 	v.i = 0;
+	v.nb = n;
 	v.len = 0;
-	if (n < 0)
-	{
-		ft_putchr('-');
-		v.nb = -n;
-	}
-	else
-		v.nb = n;
 	while (v.nb > 0)
 	{
 		arr[v.i++] = v.nb % 10;

@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <unistd.h>
+#include <stdarg.h>
 
 typedef struct s_putnbr
 {
@@ -22,9 +23,18 @@ typedef struct s_putnbr
 	unsigned int	nb;
 	int				len;
 	int 			counter;
+	unsigned long 	n;
 }					t_putnbr;
 
 int					ft_putchr(char c);
 int					ft_putstr(char *s);
+int					ft_putnbr(int a);
+int	ft_putnbr_u(unsigned int n);
+
+int	ft_puthex_up(unsigned long n);
+int	ft_puthex(unsigned long n);
+int ft_putadd(void * ptr);
+int	ft_printf(const char *format, ...);
+
 
 #endif
