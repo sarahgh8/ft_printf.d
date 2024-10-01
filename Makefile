@@ -1,32 +1,30 @@
 CC = cc
-SRC = ft_putchr.c \
-	ft_putstr.c \
-	ft_putnbr.c \
-	ft_putnbr_u.c \
-	ft_puthex.c \
-	ft_putadd.c \
-	ft_printf.c \
+SRC = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_u.c ft_puthex.c ft_putadd.c ft_printf.c
+B_SRC = ft_hashtag_bonus.c ft_space_bonus.c
 
+B_OBJ = $(B_SRC:.c=.o)
 OBJ = $(SRC:.c=.o)
+
 NAME = libftprintf.a
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror
+
+
+bonus : ${OBJ} ${B_OBJ}
+	ar rcs ${NAME} $^
 
 all: ${NAME}
 
-${NAME} : ${OBJ}
-	ar rcs ${NAME} ${OBJ}
-
-
-
+${NAME}: ${OBJ}
+	ar rcs $@ $<
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f ${OBJ}
+	rm -f ${OBJ} ${B_OBJ}
 
-fclean : clean
+fclean: clean
 	rm -f ${NAME}
 
-re : fclean all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

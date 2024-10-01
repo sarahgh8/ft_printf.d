@@ -3,69 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 10:49:39 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/09/28 10:49:42 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:17:46 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	num_len(long n, int len)
-{
-	len = 0;
-	if (n == 0)
-	{
-		ft_putchr('0');
-		return (1);
-	}
-	if (n < 0)
-	{
-		len++;
-		n = -n;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		len++;
-	}
-	return (len);
-}
-
 int	ft_putnbr(int n)
 {
 	t_putnbr	v;
-	int			arr[11];
 
-	v.i = 0;
-	v.len = 0;
+	v.counter = 0;
 	if (n < 0)
 	{
-		ft_putchr('-');
+		ft_putchar('-');
 		v.nb = -n;
 	}
 	else
 		v.nb = n;
-	while (v.nb > 0)
+	if (v.nb >= 10)
 	{
-		arr[v.i++] = v.nb % 10;
-		v.nb = v.nb / 10;
+		v.counter += ft_putnbr(v.nb / 10);
+		v.counter += ft_putnbr(v.nb % 10);
 	}
-	arr[v.i--] = '\0';
-	while (v.i >= 0)
-		ft_putchr(arr[v.i--] + '0');
-	return (num_len(n, v.len));
+	else
+	{
+		ft_putchar(v.nb + '0');
+		v.counter++;
+	}
+	return (v.counter);
 }
-
-// int main()
-// {
-//     int x = ft_putnbr(-123);
-//     ft_putchr('\n');
-//     int y = ft_putnbr(-2147483648);
-//     ft_putchr('\n');
-//     int z = ft_putnbr(0);
-//     ft_putchr('\n');
-//     printf("%d .. %d .. %d", x, y, z);
-//     return (0);
-// }

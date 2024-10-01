@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:13:03 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/09/27 12:13:05 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:19:07 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchr(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);

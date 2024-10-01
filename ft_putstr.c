@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:13:12 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/09/27 12:13:16 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:49:10 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
-	if(s == NULL)
+	if (s == NULL)
 	{
 		return (ft_putstr("(null)"));
 	}
 	while (s[i])
 	{
-		ft_putchr(s[i]);
+		ft_putchar(s[i]);
 		i++;
 	}
 	return (i);
