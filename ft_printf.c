@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:12:50 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/01 16:25:51 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/02 08:47:58 by sghunmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ static int	ft_check(va_list args, char flag, t_putnbr *v, const char *format)
 		v->i++;
 		return (ft_hashtag(va_arg(args, unsigned int), format[v->i]));
 	}
-    if(flag == ' ')
-    {
-        v->i++;
-        return (ft_space(va_arg(args, int)));
-    }
+	if (flag == ' ')
+	{
+		v->i++;
+		return (ft_space(va_arg(args, int)));
+	}
 	return (0);
 }
 
@@ -63,9 +63,10 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (v.counter);
 }
-int main ()
-{
-    ft_printf("% d%d\n", -42, 4);
-    printf("%+d %d\n", -42, 4);
-    return (0);
-}
+
+// int	main(void)
+// {
+// 	ft_printf("% d%d\n", -42, 4);
+// 	printf("%+d %d\n", -42, 4);
+// 	return (0);
+// }

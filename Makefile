@@ -6,16 +6,24 @@ B_OBJ = $(B_SRC:.c=.o)
 OBJ = $(SRC:.c=.o)
 
 NAME = libftprintf.a
+LIBFT = libft.a
+LIBFT_DIR = libft
 CFLAGS = -Wall -Wextra -Werror
-
 
 bonus : ${OBJ} ${B_OBJ}
 	ar rcs ${NAME} $^
 
+
 all: ${NAME}
 
-${NAME}: ${OBJ}
-	ar rcs $@ $<
+
+${NAME}: ${OBJ} ${B_OBJ}
+	echo "hiiiiiiiiiiiiiiiii"
+	make -C ${LIBFT_DIR}
+	@ar rcs $@ $<
+# 
+
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
