@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:15:30 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/01 16:02:50 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/02 10:58:38 by sghunmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "Libft/libft.h"
 # include <stdarg.h>
-# include <stdio.h>
 # include <unistd.h>
 
 typedef struct s_putnbr

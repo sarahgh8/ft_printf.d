@@ -7,31 +7,35 @@ OBJ = $(SRC:.c=.o)
 
 NAME = libftprintf.a
 LIBFT = libft.a
-LIBFT_DIR = libft
+LIBFT_DIR = Libft/
 CFLAGS = -Wall -Wextra -Werror
-
-bonus : ${OBJ} ${B_OBJ}
-	ar rcs ${NAME} $^
 
 
 all: ${NAME}
 
 
 ${NAME}: ${OBJ} ${B_OBJ}
-	echo "hiiiiiiiiiiiiiiiii"
-	make -C ${LIBFT_DIR}
+	@make -C ${LIBFT_DIR}
+	@cp ${LIBFT_DIR}${LIBFT} .
+	@mv ${LIBFT} ${NAME}
 	@ar rcs $@ $<
-# 
 
+bonus : ${OBJ} ${B_OBJ}
+	@make -C ${LIBFT_DIR}
+	@cp ${LIBFT_DIR}${LIBFT} .
+	@mv ${LIBFT} ${NAME}
+	@ar rcs ${NAME} $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	@make clean -C ${LIBFT_DIR}
 	rm -f ${OBJ} ${B_OBJ}
 
 fclean: clean
-	rm -f ${NAME}
+	@make fclean -C ${LIBFT_DIR}
+	rm -f ${NAME} ${LIBFT}
 
 re: fclean all
 
