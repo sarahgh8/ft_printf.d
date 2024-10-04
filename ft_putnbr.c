@@ -6,7 +6,7 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 10:49:39 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/01 15:17:46 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/04 14:27:02 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	ft_putnbr(int n)
 	{
 		ft_putchar('-');
 		v.nb = -n;
+		v.counter++;
 	}
 	else
 		v.nb = n;

@@ -13,7 +13,7 @@ all: ${NAME}
 
 
 ${NAME}: ${OBJ} ${B_OBJ}
-	@ar rcs $@ $<
+	@ar rcs ${NAME} $<
 
 bonus : ${OBJ} ${B_OBJ}
 	@ar rcs ${NAME} $^
