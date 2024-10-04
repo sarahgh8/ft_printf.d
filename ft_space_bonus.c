@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_space_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:03:48 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/02 10:04:14 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:44:33 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_space(int n)
 {
-	t_putnbr	v;
+	t_putnbr	v1;
 
-	v.counter = 0;
+	v1.counter = 0;
 	if (n > 0)
 	{
 		ft_putchar(' ');
-		v.counter++;
+		v1.counter++;
 	}
-	v.counter += ft_putnbr(n);
-	return (v.counter);
+	v1.counter += ft_putnbr(n);
+	return (v1.counter);
 }

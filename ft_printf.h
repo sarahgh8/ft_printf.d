@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:15:30 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/02 10:58:38 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:43:21 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "Libft/libft.h"
 # include <stdarg.h>
 # include <unistd.h>
 

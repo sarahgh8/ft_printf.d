@@ -6,12 +6,11 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:17:14 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/01 10:48:40 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/04 14:27:56 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_puthex(unsigned long num, char flag)
 {

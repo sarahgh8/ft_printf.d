@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hashtag_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 08:48:27 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/02 08:48:31 by sghunmin         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:44:12 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
