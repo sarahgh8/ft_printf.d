@@ -6,7 +6,7 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:12:50 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/04 17:15:57 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/06 20:48:33 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ static int	ft_check(va_list args, char flag, t_putnbr *v, const char *format)
 		return (ft_putchar('%'));
 	if (format[v->i] == '#')
 	{
-		while(format[++v->i] == '#');
-		return (ft_hashtag(va_arg(args, unsigned long), format[v->i]));
+		while (format[++v->i] != '#')
+			return (ft_hashtag(va_arg(args, unsigned long), format[v->i]));
 	}
 	if (format[v->i] == ' ')
 	{
-		while(format[++v->i] == ' ');
-		return (ft_space(va_arg(args, int)));
+		while (format[++v->i] != ' ')
+			return (ft_space(va_arg(args, int), format[v->i]));
 	}
 	return (0);
 }

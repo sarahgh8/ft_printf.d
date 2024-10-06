@@ -6,7 +6,7 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 08:48:27 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/04 15:44:12 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/06 15:04:58 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_hashtag(unsigned long num, char flag)
 {
 	if (num == 0)
-		return (0);
+		return (ft_putchar('0'));
 	if (flag == 'x')
 	{
 		ft_putstr("0x");

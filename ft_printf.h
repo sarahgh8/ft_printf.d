@@ -6,7 +6,7 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:15:30 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/04 15:43:21 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/06 11:50:38 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int					ft_puthex(unsigned long num, char flag);
 int					ft_putadd(void *ptr);
 int					ft_printf(const char *format, ...);
 int					ft_hashtag(unsigned long num, char flag);
-int					ft_space(int n);
+int					ft_space(int n, char flag);
 
 #endif

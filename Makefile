@@ -11,9 +11,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: ${NAME}
 
-
 ${NAME}: ${OBJ} ${B_OBJ}
-	@ar rcs ${NAME} $<
+	@ar rcs ${NAME} $^
 
 bonus : ${OBJ} ${B_OBJ}
 	@ar rcs ${NAME} $^
