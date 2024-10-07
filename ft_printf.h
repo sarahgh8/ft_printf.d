@@ -6,7 +6,7 @@
 /*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:15:30 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/06 11:50:38 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/07 13:15:50 by pinkchiwawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdio.h>
 # include <unistd.h>
 
 typedef struct s_putnbr
@@ -32,7 +33,7 @@ int					ft_putnbr_u(unsigned int n);
 int					ft_puthex(unsigned long num, char flag);
 int					ft_putadd(void *ptr);
 int					ft_printf(const char *format, ...);
-int					ft_hashtag(unsigned long num, char flag);
-int					ft_space(int n, char flag);
+int					check_other_flags(char flag, va_list args, t_putnbr *v,
+						const char *format);
 
 #endif
