@@ -14,13 +14,13 @@
 
 int	ft_puthex(void *num, char flag, int type)
 {
-	t_putnbr	v;
-	unsigned long long n;
-	if(type == 1)
+	t_putnbr			v;
+	unsigned long long	n;
+
+	if (type == 1)
 		n = (unsigned int)(uintptr_t)num;
 	else
 		n = (unsigned long long)num;
-
 	v.counter = 0;
 	if (n >= 16)
 	{

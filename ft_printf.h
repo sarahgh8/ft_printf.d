@@ -14,9 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <unistd.h>
-# include <stdint.h>
 
 typedef struct s_putnbr
 {
@@ -34,6 +34,7 @@ int					ft_putnbr_u(unsigned int n);
 int					ft_puthex(void *num, char flag, int type);
 int					ft_putadd(void *ptr);
 int					ft_printf(const char *format, ...);
-int					check_other_flags(char flag, va_list args, t_putnbr *v, const char *format);
+int					check_other_flags(char flag, va_list args, t_putnbr *v,
+						const char *format);
 
 #endif

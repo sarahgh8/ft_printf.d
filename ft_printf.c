@@ -31,7 +31,7 @@ static int	ft_check(va_list args, char flag, t_putnbr *v, const char *format)
 	if (format[v->i] == '#' || format[v->i] == ' ')
 	{
 		v->i++;
-		while(format[v->i] == '#' || format[v->i] == ' ')
+		while (format[v->i] == '#' || format[v->i] == ' ')
 			v->i++;
 		return (check_other_flags(format[--v->i], args, v, format));
 	}
