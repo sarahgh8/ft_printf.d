@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_additional_flags_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:35:49 by pinkchiwawa       #+#    #+#             */
-/*   Updated: 2024/10/07 13:36:06 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/08 11:40:46 by sghunmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static int	ft_hashtag(unsigned long num, char flag)
 {
-	if (num == 0)
+	if (num <= 0)
 		return (ft_putchar('0'));
 	if (flag == 'x')
 	{
 		ft_putstr("0x");
-		return (ft_puthex(num, 'x') + 2);
+		return (ft_puthex((void *)num, 'x', 1) + 2);
 	}
 	else if (flag == 'X')
 	{
 		ft_putstr("0X");
-		return (ft_puthex(num, 'X') + 2);
+		return (ft_puthex((void *)num, 'X', 1) + 2);
 	}
 	return (0);
 }
@@ -44,7 +44,7 @@ static int	ft_space(int n, char flag)
 		return (ft_putnbr(n));
 	}
 	else if (flag == 'x' || flag == 'X')
-		return (ft_puthex(n, flag));
+		return (ft_puthex((void *)(uintptr_t)(n), flag, 1));
 	return (0);
 }
 

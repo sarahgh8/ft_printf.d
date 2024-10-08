@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:12:50 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/07 21:51:03 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/08 11:34:20 by sghunmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_check(va_list args, char flag, t_putnbr *v, const char *format)
 	if (flag == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	if (flag == 'x' || flag == 'X')
-		return (ft_puthex(va_arg(args, unsigned int), flag));
+		return (ft_puthex(va_arg(args, void *), flag, 1));
 	if (flag == 'p')
 		return (ft_putadd((void *)va_arg(args, void *)));
 	if (flag == 'u')

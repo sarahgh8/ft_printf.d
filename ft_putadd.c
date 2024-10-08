@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pinkchiwawa <pinkchiwawa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sghunmin <sghunmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:17:33 by sghunmin          #+#    #+#             */
-/*   Updated: 2024/10/01 15:11:37 by pinkchiwawa      ###   ########.fr       */
+/*   Updated: 2024/10/08 11:35:15 by sghunmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_putadd(void *ptr)
 	if (ptr == 0)
 		return (ft_putstr("(nil)"));
 	ft_putstr("0x");
-	return (ft_puthex((unsigned long)ptr, 'x') + 2);
+	return (ft_puthex((void *)ptr, 'x', 0) + 2);
 }
 // int main ()
 // {
